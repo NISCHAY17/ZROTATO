@@ -1,5 +1,22 @@
 [gd_scene format=3 uid="uid://ddgsjeyxr1pbf"]
 
 [ext_resource type="PackedScene" uid="uid://c51h10gquiluo" path="res://scenes/unit/unit.tscn" id="1_wkafa"]
+[ext_resource type="Texture2D" uid="uid://cproxhccob85g" path="res://assets/sprites/Players/Player_1.png" id="2_etcc1"]
+[ext_resource type="Script" uid="uid://cpuq2tpr225md" path="res://scenes/unit/players/player.gd" id="2_xa7el"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xa7el"]
+radius = 29.0
+height = 64.0
 
 [node name="PlayerWellRounded" unique_id=1697120100 instance=ExtResource("1_wkafa")]
+script = ExtResource("2_xa7el")
+
+[node name="Sprite" parent="Visuals" parent_id_path=PackedInt32Array(1920938504) index="1" unique_id=109039783]
+texture = ExtResource("2_etcc1")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1336683117]
+position = Vector2(0, -32)
+shape = SubResource("CapsuleShape2D_xa7el")
+
+[node name="AnimationPlayer" parent="." index="2" unique_id=1387320977]
+autoplay = &""
