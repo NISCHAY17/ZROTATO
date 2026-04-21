@@ -10,6 +10,8 @@ var move_dir: Vector2
 @onready var dash_cooldown_timer: Timer = $DashCooldownTimer
 @onready var dash_timer: Timer = $DashTimer
 @onready var collision: CollisionShape2D = $CollisionShape2D
+@onready var trail: Trail = %Trail
+
 
 #var move_dir: Vector2 = Vector2.ZERO
 var dash_dir: Vector2 = Vector2.ZERO
@@ -24,10 +26,10 @@ func _process(delta: float) -> void:
 	if not is_dashing:
 		move_dir = input_dir
 
-	var current_velocity := move_dir * 500
+	var current_velocity := move_dir * stats.speed
 	
 	if is_dashing:
-		current_velocity = dash_dir * 500 * dash_speed_multi
+		current_velocity = dash_dir * stats.speed * dash_speed_multi
 	
 	position += current_velocity * delta
 	
@@ -53,6 +55,7 @@ func start_dash() -> void:
 	dash_dir = move_dir.normalized()  # direction
 	
 	dash_timer.start()
+	trail.start_trail()
 	visuals.modulate.a = 0.5
 	collision.set_deferred("disabled", true)
 func can_dash() -> bool:
