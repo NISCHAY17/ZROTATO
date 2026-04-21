@@ -5,13 +5,13 @@ class_name Player
 var move_dir: Vector2
 #TIMERS
 @export var dash_duration := 0.5
-@export var dash_speed_multi := 0.5
-@export var dash_cooldown := 0.5
+@export var dash_speed_multi := 2.67
+@export var dash_cooldown := 1.67
 @onready var dash_cooldown_timer: Timer = $DashCooldownTimer
 @onready var dash_timer: Timer = $DashTimer
 @onready var collision: CollisionShape2D = $CollisionShape2D
 
-var move_dir: Vector2 = Vector2.ZERO
+#var move_dir: Vector2 = Vector2.ZERO
 var dash_dir: Vector2 = Vector2.ZERO
 var is_dashing := false
 var dash_available := true
