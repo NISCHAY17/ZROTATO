@@ -8,7 +8,7 @@ class_name Trail
 var points_array: Array[Vector2] = []
 var is_active := false
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if not is_active:
 		return
 	points_array.append(player.global_position)
