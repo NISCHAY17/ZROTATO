@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cchmvv2pwnod8"]
+
+[ext_resource type="PackedScene" uid="uid://5c147k7x15km" path="res://scenes/unit/enemy/enemy_chaser_slow.tscn" id="1_tty1r"]
+[ext_resource type="Resource" uid="uid://bx127ivdxigln" path="res://resources/units/ENEMIES/stats_enemy_shooter.tres" id="2_6k67w"]
+[ext_resource type="Texture2D" uid="uid://4mllmwdfhmce" path="res://assets/sprites/Enemies/Enemy_4.png" id="2_tev67"]
+
+[node name="EnemyShooter" unique_id=1589242647 instance=ExtResource("1_tty1r")]
+stats = ExtResource("2_6k67w")
+
+[node name="Sprite" parent="Visuals" parent_id_path=PackedInt32Array(1920938504) index="1" unique_id=109039783]
+texture = ExtResource("2_tev67")

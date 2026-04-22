@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Unitstats" format=3 uid="uid://hh7aghk4q4tt"]
+
+[ext_resource type="Script" uid="uid://586kyojoe2wh" path="res://resources/units/unit_stats.gd" id="1_nfmx3"]
+[ext_resource type="Texture2D" uid="uid://d1ou504pylric" path="res://assets/sprites/Enemies/Enemy_1.png" id="1_oupoq"]
+
+[resource]
+script = ExtResource("1_nfmx3")
+name = "Chaser Slow"
+type = 1
+icon = ExtResource("1_oupoq")
+health = 6
+damage = 1.5
+speed = 250
+luck = 0.0
+block_chance = 3.0
+metadata/_custom_type_script = "uid://586kyojoe2wh"
